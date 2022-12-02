@@ -1,0 +1,73 @@
+:root {
+  --primary: #bc4749;
+  --secondary: #6a994e;
+  --secondary-dark: #386641;
+  --interactive: #a7c957;
+  --main-text-color: #f2e8cf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Bodoni Moda', serif;
+  color: var(--main-text-color);
+  background-color: var(--primary);
+
+}
+
+.navbar {
+  padding: 14px 0;
+  background-color: var(--secondary-dark);
+  box-shadow: -3px -3px 7px var(--secondary-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar p {
+  text-align: center;
+  font-size: 18spx;
+  margin: 0;
+  padding-bottom: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.box {
+  border-radius: 50px;
+  background: var(--secondary-dark);
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-color: var(--main-text-color);
+  border-width: 4px;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 38px;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+li {
+  list-style-type: none;
+  text-align: center;
+}
