@@ -7,3 +7,5 @@
 - Posibilidad de borrar regalos de la lista
 
 ## Screenshots
+
+![App Screenshot](./src/assets/screenshot-dia-4.png)
