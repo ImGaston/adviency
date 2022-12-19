@@ -9,4 +9,4 @@
 
 ## Screenshots
 
-![App Screenshot](#)
+![App Screenshot](./src/assets/screenshot-dia-5.png)
