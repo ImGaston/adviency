@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import EmptyList from './components/EmptyList';
+import Form from './components/Form';
 import GiftList from './components/GiftList';
 
 let setId = 3;
@@ -32,28 +33,27 @@ function App() {
     setGifts([]);
   };
 
+  const removeGift = (regalos) => {
+    setGifts(gifts.filter((regalo) => regalo.id !== regalos.id));
+  };
+
   return (
     <main className='flex h-screen flex-col items-center justify-center'>
       <h1 className='text-center text-3xl font-bold'>Regalos:</h1>
-      <ul className='w-3/4'>
+      <ul className='w-3/4 sm:w-2/4'>
         {!gifts.length && <EmptyList />}
-        {gifts.length > 0 && <GiftList regalos={gifts} />}
+        {gifts.length > 0 && (
+          <GiftList
+            regalos={gifts}
+            removeGift={removeGift}
+          />
+        )}
       </ul>
-      <div className='flex flex-col items-center justify-center pb-4'>
-        <input
-          className='m-2 rounded-2xl border py-2 pl-2'
-          value={gift}
-          type='text'
-          onChange={(event) => setGift(event.target.value)}
-        ></input>
-        <button
-          className='rounded-2xl bg-green-700 py-2 px-4 font-bold text-white'
-          type='button'
-          onClick={() => addGift()}
-        >
-          Agregar regalo
-        </button>
-      </div>
+      <Form
+        gift={gift}
+        setGift={setGift}
+        addGift={addGift}
+      />
       <button
         onClick={() => removeAll()}
         className='rounded-2xl bg-red-300 py-2 px-4 font-bold text-white hover:bg-red-700'
