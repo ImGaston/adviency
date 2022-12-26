@@ -7,11 +7,11 @@ const GiftList = ({ regalos, removeGift }) => {
         return (
           <li
             key={regalos.id}
-            className='flex flex-row justify-between pb-2'
+            className='flex flex-row justify-between py-1 pl-2'
           >
-            <p>{regalos.regalo} </p>
+            <p className='pr-2 font-bold text-white'>{regalos.regalo} </p>
             <button
-              className='cursor-pointer rounded-sm bg-red-300 px-1 text-center font-bold text-white hover:bg-red-700'
+              className='cursor-pointer rounded-2xl bg-red-300 p-1 text-center font-bold text-white hover:bg-red-700'
               onClick={() => removeGift(regalos)}
             >
               x
