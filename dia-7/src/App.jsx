@@ -16,6 +16,29 @@ function App() {
   const [gift, setGift] = useState('');
   const [gifts, setGifts] = useState(listado);
 
+  const addGift = () => {
+    if (!gift.length || gifts.find((regalo) => regalo.regalo == gift)) {
+      console.log('escribi algo amigo');
+    } else {
+      setGift('');
+      setGifts([
+        ...gifts,
+        {
+          id: setId++,
+          regalo: gift,
+        },
+      ]);
+    }
+  };
+
+  const removeGift = (regalos) => {
+    setGifts(gifts.filter((regalo) => regalo.id !== regalos.id));
+  };
+
+  const removeAll = () => {
+    setGifts([]);
+  };
+
   return (
     <main
       className='flex h-screen flex-col items-center justify-center'
@@ -27,10 +50,19 @@ function App() {
         </h1>
         <ul className='m-auto w-3/4 sm:w-2/4'>
           {!gifts.length && <EmptyList />}
-          {gifts.length > 0 && <GiftList regalos={gifts} />}
+          {gifts.length > 0 && (
+            <GiftList
+              regalos={gifts}
+              removeGift={removeGift}
+            />
+          )}
         </ul>
-        <Form />
-        <RemoveAll />
+        <Form
+          gift={gift}
+          setGift={setGift}
+          addGift={addGift}
+        />
+        <RemoveAll removeAll={removeAll} />
       </div>
     </main>
   );

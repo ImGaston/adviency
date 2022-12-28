@@ -3,7 +3,9 @@ import React from 'react';
 const EmptyList = () => {
   return (
     <div>
-      <h1>EmptyList</h1>
+      <p className='py-4 text-center font-bold text-white'>
+        Te portaste mal este año? Yo se que no, agrega un regalo
+      </p>
     </div>
   );
 };

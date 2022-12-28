@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GiftList = ({ regalos }) => {
+const GiftList = ({ regalos, removeGift }) => {
   return (
     <>
       {regalos.map((regalos) => {
@@ -12,7 +12,7 @@ const GiftList = ({ regalos }) => {
             <p className='pr-2 font-bold text-white'>{regalos.regalo}</p>
             <button
               className='cursor-pointer rounded-2xl bg-red-300 p-1 text-center font-bold text-white hover:bg-red-700'
-              // onClick={() => removeGift(regalos)}
+              onClick={() => removeGift(regalos)}
             >
               x
             </button>

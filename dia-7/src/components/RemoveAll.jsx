@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RemoveAll = () => {
+const RemoveAll = ({ removeAll }) => {
   return (
     <div className='flex flex-col items-center pb-4'>
       <button
