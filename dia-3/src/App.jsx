@@ -1,10 +1,5 @@
 import { useState } from 'react';
 import bgImage from './assets/bg-image.jpg';
-// className='bg-fixed'
-// style={{ backgroundImage: `url(${bgImage})` }}
-
-//TODO: agregar estilos segun diseño anterior
-//TODO: reloj de santa con los dias para navidad
 
 let nextId = 4;
 
