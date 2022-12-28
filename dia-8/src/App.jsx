@@ -12,6 +12,8 @@ const listado = [
   { id: 2, regalo: 'Camiseta selección ⭐️⭐️⭐️' },
 ];
 
+//?: Como hacemos para que la cantidad se agregue a un array del estado Gift
+
 function App() {
   const [gift, setGift] = useState('');
   const [gifts, setGifts] = useState(listado);

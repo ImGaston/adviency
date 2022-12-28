@@ -1,5 +1,7 @@
 import React from 'react';
 
+//TODO: Que aparezca la cantidad en la lista de regalos
+
 const GiftList = ({ regalos, removeGift }) => {
   return (
     <>
