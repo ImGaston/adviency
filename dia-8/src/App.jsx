@@ -8,26 +8,25 @@ import bgImage from './assets/bg-image.jpg';
 let setId = 3;
 
 const listado = [
-  { id: 1, regalo: 'Ganar la copa' },
-  { id: 2, regalo: 'Camiseta selección ⭐️⭐️⭐️' },
+  { id: 1, regalo: 'Ganar la copa', cantidad: 1 },
+  { id: 2, regalo: 'Camiseta selección ⭐️⭐️⭐️', cantidad: 2 },
 ];
 
-//?: Como hacemos para que la cantidad se agregue a un array del estado Gift
-
 function App() {
-  const [gift, setGift] = useState('');
+  const [gift, setGift] = useState([]);
   const [gifts, setGifts] = useState(listado);
 
   const addGift = () => {
-    if (!gift.length || gifts.find((regalo) => regalo.regalo == gift)) {
+    if (!gift[0].length || gifts.find((regalo) => regalo.regalo == gift)) {
       console.log('escribi algo amigo');
     } else {
-      setGift('');
+      setGift(['', '']);
       setGifts([
         ...gifts,
         {
           id: setId++,
-          regalo: gift,
+          regalo: gift[0],
+          cantidad: gift[1],
         },
       ]);
     }

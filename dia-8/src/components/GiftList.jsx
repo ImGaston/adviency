@@ -1,7 +1,5 @@
 import React from 'react';
 
-//TODO: Que aparezca la cantidad en la lista de regalos
-
 const GiftList = ({ regalos, removeGift }) => {
   return (
     <>
@@ -11,9 +9,11 @@ const GiftList = ({ regalos, removeGift }) => {
             key={regalos.id}
             className='flex flex-row justify-between py-1 pl-2'
           >
-            <p className='pr-2 font-bold text-white'>{regalos.regalo}</p>
+            <p className='pr-2 font-bold text-white'>
+              {regalos.regalo} unidades: {regalos.cantidad}
+            </p>
             <button
-              className='cursor-pointer rounded-2xl bg-red-300 p-1 text-center font-bold text-white hover:bg-red-700'
+              className='h-8 cursor-pointer self-center rounded-2xl bg-red-300 px-2 text-center font-bold text-white hover:bg-red-700'
               onClick={() => removeGift(regalos)}
             >
               x
